@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoursesViewController: UIViewController, UITableViewDataSource {
+class CoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,6 +16,7 @@ class CoursesViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         CourseFunctions.readCourse(completion: { [weak self] in
             self?.tableView.reloadData()
@@ -28,14 +29,14 @@ class CoursesViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CoursesTableViewCell
         
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
-        }
+        cell.setup(courseModel:CourseData.courseModels[indexPath.row])
         
-        cell!.textLabel?.text = CourseData.courseModels[indexPath.row].course
-        
-        return cell!
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }

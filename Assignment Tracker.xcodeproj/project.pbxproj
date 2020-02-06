@@ -15,6 +15,7 @@
 		AC4353FC23EC2B98001F481E /* CourseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4353FB23EC2B98001F481E /* CourseData.swift */; };
 		AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4353FF23EC3399001F481E /* CoursesViewController.storyboard */; };
 		AC43540223EC3412001F481E /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540123EC3412001F481E /* CoursesViewController.swift */; };
+		AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		AC4353FB23EC2B98001F481E /* CourseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseData.swift; sourceTree = "<group>"; };
 		AC4353FF23EC3399001F481E /* CoursesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoursesViewController.storyboard; sourceTree = "<group>"; };
 		AC43540123EC3412001F481E /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				AC4353FF23EC3399001F481E /* CoursesViewController.storyboard */,
 				AC43540123EC3412001F481E /* CoursesViewController.swift */,
+				AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */,
 			);
 			path = CoursesViewController;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */,
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
 				AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */,
 				AC4353FC23EC2B98001F481E /* CourseData.swift in Sources */,
