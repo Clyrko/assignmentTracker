@@ -18,10 +18,10 @@ class CoursesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        cardView.layer.shadowOpacity = 1
-        cardView.layer.shadowOffset = CGSize.zero
-        cardView.layer.shadowColor = UIColor.darkGray.cgColor
-        cardView.layer.cornerRadius = 10
+        cardView.addShadows()
+        cardView.addRoundedCorners()
+        
+        courseLabel.font = UIFont(name: Theme.mainFontName, size: 40)
     }
 
     func setup(courseModel: CourseModel) {

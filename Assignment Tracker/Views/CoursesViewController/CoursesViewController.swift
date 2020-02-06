@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CoursesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +22,11 @@ class CoursesViewController: UIViewController, UITableViewDataSource, UITableVie
             self?.tableView.reloadData()
         })
     }
-    
+}
+
+
+extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return CourseData.courseModels.count
     }

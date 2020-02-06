@@ -16,6 +16,10 @@
 		AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4353FF23EC3399001F481E /* CoursesViewController.storyboard */; };
 		AC43540223EC3412001F481E /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540123EC3412001F481E /* CoursesViewController.swift */; };
 		AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */; };
+		AC43540923EC588E001F481E /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540823EC588E001F481E /* UIViewExtensions.swift */; };
+		AC43540C23EC5E97001F481E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540B23EC5E97001F481E /* Theme.swift */; };
+		AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC43540D23EC601F001F481E /* Herculanum.ttf */; };
+		AC43541023EC6239001F481E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC43540F23EC6239001F481E /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		AC4353FF23EC3399001F481E /* CoursesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CoursesViewController.storyboard; sourceTree = "<group>"; };
 		AC43540123EC3412001F481E /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
+		AC43540823EC588E001F481E /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		AC43540B23EC5E97001F481E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		AC43540D23EC601F001F481E /* Herculanum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Herculanum.ttf; sourceTree = "<group>"; };
+		AC43540F23EC6239001F481E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,8 @@
 		AC4353DD23EC16D8001F481E /* Assignment Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				AC43540A23EC5E72001F481E /* Resources */,
+				AC43540523EC5685001F481E /* Extentions */,
 				AC4353FD23EC32FA001F481E /* Views */,
 				AC4353DE23EC16D8001F481E /* AppDelegate.swift */,
 				AC4353F023EC26A5001F481E /* Model */,
@@ -106,6 +116,24 @@
 				AC43540323EC4A5D001F481E /* CoursesTableViewCell.swift */,
 			);
 			path = CoursesViewController;
+			sourceTree = "<group>";
+		};
+		AC43540523EC5685001F481E /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				AC43540823EC588E001F481E /* UIViewExtensions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		AC43540A23EC5E72001F481E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC43540D23EC601F001F481E /* Herculanum.ttf */,
+				AC43540B23EC5E97001F481E /* Theme.swift */,
+				AC43540F23EC6239001F481E /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +194,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC43541023EC6239001F481E /* Colors.xcassets in Resources */,
 				AC4353E923EC16DC001F481E /* LaunchScreen.storyboard in Resources */,
 				AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */,
+				AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */,
 				AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,7 +210,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */,
+				AC43540C23EC5E97001F481E /* Theme.swift in Sources */,
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
+				AC43540923EC588E001F481E /* UIViewExtensions.swift in Sources */,
 				AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */,
 				AC4353FC23EC2B98001F481E /* CourseData.swift in Sources */,
 				AC4353FA23EC2A05001F481E /* CourseFunctions.swift in Sources */,
