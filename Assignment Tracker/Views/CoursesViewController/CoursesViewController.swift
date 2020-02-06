@@ -21,6 +21,8 @@ class CoursesViewController: UIViewController {
         CourseFunctions.readCourse(completion: { [weak self] in
             self?.tableView.reloadData()
         })
+        
+        view.backgroundColor = Theme.Background
     }
 }
 

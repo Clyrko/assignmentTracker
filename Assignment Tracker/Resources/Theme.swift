@@ -9,5 +9,8 @@
 import UIKit
 
 class Theme {
-     static let mainFontName = "Herculanum"
+    static let mainFontName = "Herculanum"
+    static let Accent = UIColor(named: "Accent")
+    static let Background = UIColor(named: "Background")
+    static let Tint = UIColor(named: "Tint")
 }
