@@ -9,11 +9,11 @@
 import Foundation
 
 class CourseModel {
-    var id: String!
-    var course: String!
+    let id: UUID
+    var course: String
     
     init(course: String) {
-        id = UUID().uuidString
+        id = UUID()
         self.course = course
     }
 }

@@ -13,7 +13,17 @@ class CourseFunctions {
         
     }
     
-    static func readCourse() {
+    static func readCourse(completion: @escaping () -> ())  {
+        DispatchQueue.global(qos: .userInteractive).async {
+            if CourseData.courseModels.count == 0 {
+                CourseData.courseModels.append(CourseModel(course: "Intro to XCODE"))
+                CourseData.courseModels.append(CourseModel(course: "Swift 101"))
+                CourseData.courseModels.append(CourseModel(course: "Need to Upgrade"))
+            }
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
         
     }
     
