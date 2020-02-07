@@ -11,6 +11,8 @@ import UIKit
 class CoursesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,8 @@ class CoursesViewController: UIViewController {
             self?.tableView.reloadData()
         })
         
-        view.backgroundColor = Theme.Background
+        view.backgroundColor = Theme.backgroundColor
+        addButton.createFloatingButtonAction()
     }
 }
 
