@@ -29,7 +29,23 @@ class AddCourseViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func save(_ sender: Any) {
-        CourseFunctions.createCourse(courseModel: CourseModel(course: courseTextField.text!))
+        
+        courseTextField.rightViewMode = .never
+        
+        guard courseTextField.text != "", let newCourseName = courseTextField.text else {
+            
+            courseTextField.layer.borderColor = UIColor.red.cgColor
+            courseTextField.layer.borderWidth = 2
+            courseTextField.layer.cornerRadius = 5
+            
+            courseTextField.placeholder = "Required!"
+            
+            courseTextField.rightViewMode = .unlessEditing
+            
+            return
+        }
+        
+        CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName))
         
         if let finishedSaving = finishedSaving {
             finishedSaving()
