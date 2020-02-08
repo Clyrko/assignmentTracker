@@ -10,7 +10,7 @@ import Foundation
 
 class CourseFunctions {
     static func createCourse(courseModel: CourseModel) {
-        
+        CourseData.courseModels.append(courseModel)
     }
     
     static func readCourse(completion: @escaping () -> ())  {

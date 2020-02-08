@@ -27,6 +27,17 @@ class CoursesViewController: UIViewController {
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingButtonAction()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddCourseSegue" {
+            let popup = segue.destination as! AddCourseViewController
+            popup.finishedSaving = { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
+    
+
 }
 
 

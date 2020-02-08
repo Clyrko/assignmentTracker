@@ -17,6 +17,8 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
+    var finishedSaving: (() -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +29,11 @@ class AddCourseViewController: UIViewController {
         dismiss(animated: true)
     }
     @IBAction func save(_ sender: Any) {
+        CourseFunctions.createCourse(courseModel: CourseModel(course: courseTextField.text!))
+        
+        if let finishedSaving = finishedSaving {
+            finishedSaving()
+        }
         dismiss(animated: true)
     }
 }

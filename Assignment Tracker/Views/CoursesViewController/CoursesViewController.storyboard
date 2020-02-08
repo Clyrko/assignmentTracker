@@ -60,7 +60,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" image="icons8-plus"/>
                                 <connections>
-                                    <segue destination="jbM-rl-ofE" kind="presentation" id="LEo-ru-PJb"/>
+                                    <segue destination="jbM-rl-ofE" kind="presentation" identifier="toAddCourseSegue" id="LEo-ru-PJb"/>
                                 </connections>
                             </button>
                         </subviews>
