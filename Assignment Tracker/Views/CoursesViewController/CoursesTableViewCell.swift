@@ -13,6 +13,7 @@ class CoursesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var courseLabel: UILabel!
+    @IBOutlet weak var courseImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,11 +21,15 @@ class CoursesTableViewCell: UITableViewCell {
         
         cardView.addShadows()
         cardView.addRoundedCorners()
+        cardView.backgroundColor = Theme.Accent
         
         courseLabel.font = UIFont(name: Theme.mainFontName, size: 40)
+        
+        courseImageView.layer.cornerRadius = cardView.layer.cornerRadius
     }
 
     func setup(courseModel: CourseModel) {
         courseLabel.text = courseModel.course
+        courseImageView.image = courseModel.image
     }
 }

@@ -48,6 +48,7 @@
 		AC43541F23ED94F8001F481E /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		AC43542223ED9A94001F481E /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		AC43542423EDA647001F481E /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +144,7 @@
 				AC43542123ED9A59001F481E /* CustomControls */,
 				AC43540523EC5685001F481E /* Extentions */,
 				AC43540D23EC601F001F481E /* Herculanum.ttf */,
+				ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */,
 				AC43540B23EC5E97001F481E /* Theme.swift */,
 				AC43540F23EC6239001F481E /* Colors.xcassets */,
 			);
