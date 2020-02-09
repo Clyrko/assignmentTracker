@@ -20,7 +20,6 @@
 		AC43540C23EC5E97001F481E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43540B23EC5E97001F481E /* Theme.swift */; };
 		AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC43540D23EC601F001F481E /* Herculanum.ttf */; };
 		AC43541023EC6239001F481E /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC43540F23EC6239001F481E /* Colors.xcassets */; };
-		AC43541223ED7749001F481E /* icons8-plus.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AC43541123ED7749001F481E /* icons8-plus.pdf */; };
 		AC43541423ED7D73001F481E /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43541323ED7D73001F481E /* UIButtonExtension.swift */; };
 		AC43541D23ED94C7001F481E /* AddCourseViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC43541C23ED94C7001F481E /* AddCourseViewController.storyboard */; };
 		AC43542023ED94F8001F481E /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43541F23ED94F8001F481E /* AddCourseViewController.swift */; };
@@ -44,7 +43,6 @@
 		AC43540B23EC5E97001F481E /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		AC43540D23EC601F001F481E /* Herculanum.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Herculanum.ttf; sourceTree = "<group>"; };
 		AC43540F23EC6239001F481E /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		AC43541123ED7749001F481E /* icons8-plus.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "icons8-plus.pdf"; sourceTree = "<group>"; };
 		AC43541323ED7D73001F481E /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		AC43541C23ED94C7001F481E /* AddCourseViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddCourseViewController.storyboard; sourceTree = "<group>"; };
 		AC43541F23ED94F8001F481E /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +85,6 @@
 				AC4353DE23EC16D8001F481E /* AppDelegate.swift */,
 				AC4353F023EC26A5001F481E /* Model */,
 				AC4353E523EC16DC001F481E /* Assets.xcassets */,
-				AC43541123ED7749001F481E /* icons8-plus.pdf */,
 				AC4353E723EC16DC001F481E /* LaunchScreen.storyboard */,
 				AC4353EA23EC16DC001F481E /* Info.plist */,
 			);
@@ -228,7 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC43541223ED7749001F481E /* icons8-plus.pdf in Resources */,
 				AC43541023EC6239001F481E /* Colors.xcassets in Resources */,
 				AC4353E923EC16DC001F481E /* LaunchScreen.storyboard in Resources */,
 				AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */,

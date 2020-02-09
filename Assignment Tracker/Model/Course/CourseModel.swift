@@ -6,14 +6,16 @@
 //  Copyright © 2020 Jay A. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CourseModel {
     let id: UUID
     var course: String
+    var image: UIImage?
     
-    init(course: String) {
+    init(course: String, image: UIImage? = nil) {
         id = UUID()
         self.course = course
+        self.image = image
     }
 }
