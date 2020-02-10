@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC39EAD023F1A060001D3CCA /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */; };
 		AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4353DE23EC16D8001F481E /* AppDelegate.swift */; };
 		AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4353E523EC16DC001F481E /* Assets.xcassets */; };
 		AC4353E923EC16DC001F481E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4353E723EC16DC001F481E /* LaunchScreen.storyboard */; };
@@ -233,6 +234,7 @@
 				AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */,
 				AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */,
 				AC43541D23ED94C7001F481E /* AddCourseViewController.storyboard in Resources */,
+				AC39EAD023F1A060001D3CCA /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

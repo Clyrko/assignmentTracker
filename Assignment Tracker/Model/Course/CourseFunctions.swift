@@ -31,7 +31,7 @@ class CourseFunctions {
         
     }
     
-    static func deleteCourse(courseModel: CourseModel) {
-        
+    static func deleteCourse(index: Int) {
+        CourseData.courseModels.remove(at: index)
     }
 }
