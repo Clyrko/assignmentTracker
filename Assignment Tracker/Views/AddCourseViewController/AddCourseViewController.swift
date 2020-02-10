@@ -72,7 +72,6 @@ class AddCourseViewController: UIViewController {
     }
     
     @IBAction func addPhoto(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             PHPhotoLibrary.requestAuthorization { (status) in
                 switch status {
                 case .authorized:
@@ -102,14 +101,14 @@ class AddCourseViewController: UIViewController {
                     alert.addAction(cancelAction)
                     self.present(alert, animated: true)
                 }
-            }
         }
     }
 }
 
 extension AddCourseViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
 //            self.imageView.image = image
         }
         

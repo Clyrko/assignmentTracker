@@ -82,8 +82,20 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         delete.image = #imageLiteral(resourceName: "deleteButton")
-        delete.backgroundColor = Theme.tintColor
         
         return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            self.performSegue(withIdentifier: "toAddCourseSegue", sender: nil)
+            actionPerformed(true)
+        }
+        
+        edit.image = #imageLiteral(resourceName: "editIcon")
+        edit.backgroundColor = Theme.secondaryTintColor 
+        
+        return UISwipeActionsConfiguration(actions: [edit])
     }
 }
