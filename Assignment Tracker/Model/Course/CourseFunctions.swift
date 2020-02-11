@@ -6,7 +6,7 @@
 //  Copyright © 2020 Jay A. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class CourseFunctions {
     static func createCourse(courseModel: CourseModel) {
@@ -27,8 +27,9 @@ class CourseFunctions {
         
     }
     
-    static func updateCourse(courseModel: CourseModel) {
-        
+    static func updateCourse(at index: Int, course: String, image: UIImage? = nil) {
+        CourseData.courseModels[index].course = course
+        CourseData.courseModels[index].image = image
     }
     
     static func deleteCourse(index: Int) {

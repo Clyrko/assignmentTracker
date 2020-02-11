@@ -13,6 +13,7 @@ class CoursesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     
+    var courseIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class CoursesViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddCourseSegue" {
             let popup = segue.destination as! AddCourseViewController
+            popup.courseIndexToEdit = self.courseIndexToEdit
             popup.finishedSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -89,6 +91,7 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let edit = UIContextualAction(style: .normal, title: "Edit") { (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            self.courseIndexToEdit = indexPath.row
             self.performSegue(withIdentifier: "toAddCourseSegue", sender: nil)
             actionPerformed(true)
         }
