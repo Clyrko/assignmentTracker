@@ -33,7 +33,11 @@ class CoursesTableViewCell: UITableViewCell {
         
         if let courseImage = courseModel.image {
             courseImageView.alpha = 0.3
-//            courseImageView.image
+            courseImageView.image = courseImage
+            
+            UIView.animate(withDuration: 1) {
+                self.courseImageView.alpha = 1
+            }
         }
         courseImageView.image = courseModel.image
     }

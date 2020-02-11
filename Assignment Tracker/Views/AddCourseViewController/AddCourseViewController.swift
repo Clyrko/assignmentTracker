@@ -20,6 +20,7 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var imageView: UIButton!
     
     var finishedSaving: (() -> ())?
+    var courseIndexToEdit: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,16 @@ class AddCourseViewController: UIViewController {
         courseLabel.layer.shadowRadius = 5
         
         imageView.layer.cornerRadius = 10
+        
+        if let index = courseIndexToEdit {
+            let course = CourseData.courseModels[index]
+            courseTextField.text = course.course
+//            imageView.image = course.image
+            courseLabel.text = "Edit Course"
+        }
     
     }
+    
     @IBAction func cancel(_ sender: Any) {
         dismiss(animated: true)
     }
@@ -54,7 +63,12 @@ class AddCourseViewController: UIViewController {
             return
         }
         
-        CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName))
+        if let index = courseIndexToEdit {
+            CourseFunctions.updateCourse(at: index, course: newCourseName)
+//            , image: imageView.image
+        } else {
+            CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName))
+        }
         // , image: imageView.image
         
         if let finishedSaving = finishedSaving {
