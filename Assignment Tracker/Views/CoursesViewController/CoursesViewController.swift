@@ -36,6 +36,7 @@ class CoursesViewController: UIViewController {
             popup.finishedSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            courseIndexToEdit = nil
         }
     }
     

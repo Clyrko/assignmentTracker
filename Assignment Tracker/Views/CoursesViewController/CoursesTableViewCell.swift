@@ -30,6 +30,11 @@ class CoursesTableViewCell: UITableViewCell {
 
     func setup(courseModel: CourseModel) {
         courseLabel.text = courseModel.course
+        
+        if let courseImage = courseModel.image {
+            courseImageView.alpha = 0.3
+//            courseImageView.image
+        }
         courseImageView.image = courseModel.image
     }
 }
