@@ -12,8 +12,10 @@ class CoursesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet var helpView: UIVisualEffectView!
     
     var courseIndexToEdit: Int?
+    let seenCourseHelp = "seenCourseHelp"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +23,20 @@ class CoursesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        CourseFunctions.readCourse(completion: { [weak self] in
-            self?.tableView.reloadData()
+        CourseFunctions.readCourse(completion: { [unowned self] in
+            self.tableView.reloadData()
+            
+            if CourseData.courseModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.seenCourseHelp)  == false {
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                }
+            }
         })
+        
+        
+        view.addSubview(helpView)
+        helpView.frame = view.frame
         
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingButtonAction()
@@ -41,6 +54,14 @@ class CoursesViewController: UIViewController {
     }
     
 
+    @IBAction func closeHelpView(_ sender: AppUIButton) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.helpView.alpha = 0
+        }) { (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenCourseHelp)
+        }
+    }
 }
 
 

@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -79,10 +80,63 @@
                     </view>
                     <connections>
                         <outlet property="addButton" destination="Z9Z-2q-EGT" id="rgm-ku-vwL"/>
+                        <outlet property="helpView" destination="xBc-uP-xKY" id="her-LE-Wy9"/>
                         <outlet property="tableView" destination="FjZ-Hx-Q0f" id="JFf-AY-G8F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3LZ-er-YsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="xBc-uP-xKY">
+                    <rect key="frame" x="0.0" y="0.0" width="379" height="623"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ydc-Ew-9Nb">
+                        <rect key="frame" x="0.0" y="0.0" width="379" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20X-jZ-E5Z" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="18" y="539" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="FrS-hu-x1N"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeHelpView:" destination="Ii0-tL-pgg" eventType="touchUpInside" id="1bK-0g-yP8"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Yg8-D0-T13">
+                                <rect key="frame" x="18" y="40" width="343" height="388"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Fs-rF-WLR">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="G53-g5-xuv">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="iuo-aV-iwx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="bFV-Dq-fgc">
+                                        <rect key="frame" x="0.0" y="238" width="343" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="bLs-Te-VA7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="20X-jZ-E5Z" secondAttribute="bottom" constant="40" id="5yb-e2-Ovb"/>
+                            <constraint firstItem="Yg8-D0-T13" firstAttribute="leading" secondItem="ydc-Ew-9Nb" secondAttribute="leading" constant="18" id="GFH-lw-Me5"/>
+                            <constraint firstItem="Yg8-D0-T13" firstAttribute="top" secondItem="ydc-Ew-9Nb" secondAttribute="top" constant="40" id="Q0w-ZE-hVs"/>
+                            <constraint firstAttribute="trailing" secondItem="Yg8-D0-T13" secondAttribute="trailing" constant="18" id="QD5-vP-paw"/>
+                            <constraint firstItem="20X-jZ-E5Z" firstAttribute="leading" secondItem="ydc-Ew-9Nb" secondAttribute="leading" constant="18" id="Rfc-57-OeB"/>
+                            <constraint firstAttribute="trailing" secondItem="20X-jZ-E5Z" secondAttribute="trailing" constant="18" id="X1Q-ug-npU"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
             </objects>
             <point key="canvasLocation" x="127.53623188405798" y="145.98214285714286"/>
         </scene>
@@ -96,12 +150,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="deleteSwipe" width="346" height="135"/>
+        <image name="editSwipe" width="346" height="135"/>
         <image name="icons8-plus" width="50" height="50"/>
         <namedColor name="Accent">
-            <color red="0.99215686274509807" green="0.72549019607843135" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.74901960784313726" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.14901960784313725" green="0.65490196078431373" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.54509803921568623" green="0.53725490196078429" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
