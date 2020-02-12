@@ -26,6 +26,11 @@
 		AC43542023ED94F8001F481E /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43541F23ED94F8001F481E /* AddCourseViewController.swift */; };
 		AC43542323ED9A94001F481E /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43542223ED9A94001F481E /* PopupUIView.swift */; };
 		AC43542523EDA647001F481E /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43542423EDA647001F481E /* AppUIButton.swift */; };
+		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
+		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
+		ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B423F409A200D0549A /* DayModel.swift */; };
+		ACDAE6B823F40DD100D0549A /* AssignmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B723F40DD100D0549A /* AssignmentModel.swift */; };
+		ACDAE6BA23F40F1E00D0549A /* AssignmentTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B923F40F1E00D0549A /* AssignmentTypeEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		AC43542223ED9A94001F481E /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		AC43542423EDA647001F481E /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
 		ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
+		ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssignmentsViewController.storyboard; sourceTree = "<group>"; };
+		ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
+		ACDAE6B423F409A200D0549A /* DayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayModel.swift; sourceTree = "<group>"; };
+		ACDAE6B723F40DD100D0549A /* AssignmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentModel.swift; sourceTree = "<group>"; };
+		ACDAE6B923F40F1E00D0549A /* AssignmentTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTypeEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +106,10 @@
 		AC4353F023EC26A5001F481E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AC4353FB23EC2B98001F481E /* CourseData.swift */,
 				AC4353F623EC29DA001F481E /* Course */,
+				ACDAE6B323F4098000D0549A /* Day */,
+				ACDAE6B623F40DA100D0549A /* Assignment */,
+				AC4353FB23EC2B98001F481E /* CourseData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,8 +126,9 @@
 		AC4353FD23EC32FA001F481E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC43541E23ED94CD001F481E /* AddCourseViewController */,
 				AC4353FE23EC330C001F481E /* CoursesViewController */,
+				AC43541E23ED94CD001F481E /* AddCourseViewController */,
+				ACDAE6AE23F3F8CA00D0549A /* AssignmentsViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +181,32 @@
 				AC43542423EDA647001F481E /* AppUIButton.swift */,
 			);
 			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		ACDAE6AE23F3F8CA00D0549A /* AssignmentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */,
+				ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */,
+			);
+			path = AssignmentsViewController;
+			sourceTree = "<group>";
+		};
+		ACDAE6B323F4098000D0549A /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				ACDAE6B423F409A200D0549A /* DayModel.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		ACDAE6B623F40DA100D0549A /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				ACDAE6B723F40DD100D0549A /* AssignmentModel.swift */,
+				ACDAE6B923F40F1E00D0549A /* AssignmentTypeEnum.swift */,
+			);
+			path = Assignment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +273,7 @@
 				AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */,
 				AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */,
 				AC43541D23ED94C7001F481E /* AddCourseViewController.storyboard in Resources */,
+				ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */,
 				AC39EAD023F1A060001D3CCA /* Raleway-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,11 +287,15 @@
 			files = (
 				AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */,
 				AC43540C23EC5E97001F481E /* Theme.swift in Sources */,
+				ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */,
+				ACDAE6BA23F40F1E00D0549A /* AssignmentTypeEnum.swift in Sources */,
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
+				ACDAE6B823F40DD100D0549A /* AssignmentModel.swift in Sources */,
 				AC43540923EC588E001F481E /* UIViewExtensions.swift in Sources */,
 				AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */,
 				AC43541423ED7D73001F481E /* UIButtonExtension.swift in Sources */,
 				AC4353FC23EC2B98001F481E /* CourseData.swift in Sources */,
+				ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */,
 				AC43542523EDA647001F481E /* AppUIButton.swift in Sources */,
 				AC43542023ED94F8001F481E /* AddCourseViewController.swift in Sources */,
 				AC4353FA23EC2A05001F481E /* CourseFunctions.swift in Sources */,

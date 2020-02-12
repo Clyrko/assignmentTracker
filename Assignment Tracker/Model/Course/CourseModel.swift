@@ -8,14 +8,19 @@
 
 import UIKit
 
-class CourseModel {
+struct CourseModel {
     let id: UUID
     var course: String
     var image: UIImage?
+    var dayModels = [DayModel]()
     
-    init(course: String, image: UIImage? = nil) {
+    init(course: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
         id = UUID()
         self.course = course
         self.image = image
+        
+        if let dayModels = dayModels{
+            self.dayModels = dayModels
+        }
     }
 }

@@ -42,6 +42,7 @@ class CoursesViewController: UIViewController {
         addButton.createFloatingButtonAction()
     }
     
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toAddCourseSegue" {
             let popup = segue.destination as! AddCourseViewController
@@ -122,5 +123,11 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         edit.backgroundColor = Theme.secondaryTintColor 
         
         return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: String(describing: AssignmentsViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()!
+         navigationController?.pushViewController(vc, animated: true)
     }
 }

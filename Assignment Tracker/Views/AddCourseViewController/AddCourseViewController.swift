@@ -80,6 +80,7 @@ class AddCourseViewController: UIViewController {
     
     fileprivate func presentPhotoPickerController() {
         let myPickerController = UIImagePickerController()
+        myPickerController.allowsEditing = true
         myPickerController.delegate = self
         myPickerController.sourceType = .photoLibrary
         self.present(myPickerController, animated: true)
@@ -122,7 +123,9 @@ class AddCourseViewController: UIViewController {
 extension AddCourseViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        if let image = info[.originalImage] as? UIImage {
+        if let image = info[.editedImage] as? UIImage {
+//            self.imageView.image = image
+        } else if let image = info[.originalImage] as? UIImage {
 //            self.imageView.image = image
         }
         
