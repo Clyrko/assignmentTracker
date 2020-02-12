@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC288C6823F41F5300DE5AD1 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC288C6723F41F5300DE5AD1 /* MockData.swift */; };
 		AC39EAD023F1A060001D3CCA /* Raleway-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */; };
 		AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4353DE23EC16D8001F481E /* AppDelegate.swift */; };
 		AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4353E523EC16DC001F481E /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC288C6723F41F5300DE5AD1 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		AC4353DB23EC16D8001F481E /* Assignment Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Assignment Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC4353DE23EC16D8001F481E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC4353E523EC16DC001F481E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,11 +96,11 @@
 			children = (
 				AC43540A23EC5E72001F481E /* Resources */,
 				AC4353FD23EC32FA001F481E /* Views */,
-				AC4353DE23EC16D8001F481E /* AppDelegate.swift */,
 				AC4353F023EC26A5001F481E /* Model */,
 				AC4353E523EC16DC001F481E /* Assets.xcassets */,
 				AC4353E723EC16DC001F481E /* LaunchScreen.storyboard */,
 				AC4353EA23EC16DC001F481E /* Info.plist */,
+				AC4353DE23EC16D8001F481E /* AppDelegate.swift */,
 			);
 			path = "Assignment Tracker";
 			sourceTree = "<group>";
@@ -106,10 +108,11 @@
 		AC4353F023EC26A5001F481E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC4353FB23EC2B98001F481E /* CourseData.swift */,
+				AC288C6723F41F5300DE5AD1 /* MockData.swift */,
 				AC4353F623EC29DA001F481E /* Course */,
 				ACDAE6B323F4098000D0549A /* Day */,
 				ACDAE6B623F40DA100D0549A /* Assignment */,
-				AC4353FB23EC2B98001F481E /* CourseData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */,
 				AC43540C23EC5E97001F481E /* Theme.swift in Sources */,
 				ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */,
+				AC288C6823F41F5300DE5AD1 /* MockData.swift in Sources */,
 				ACDAE6BA23F40F1E00D0549A /* AssignmentTypeEnum.swift in Sources */,
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
 				ACDAE6B823F40DD100D0549A /* AssignmentModel.swift in Sources */,
