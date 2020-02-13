@@ -17,7 +17,8 @@ class AddCourseViewController: UIViewController {
     @IBOutlet weak var courseTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var imageView: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
+    
     
     var finishedSaving: (() -> ())?
     var courseIndexToEdit: Int?
@@ -64,12 +65,10 @@ class AddCourseViewController: UIViewController {
         }
         
         if let index = courseIndexToEdit {
-            CourseFunctions.updateCourse(at: index, course: newCourseName)
-//            , image: imageView.image
+            CourseFunctions.updateCourse(at: index, course: newCourseName, image: imageView.image)
         } else {
-            CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName))
+            CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName, image: imageView.image))
         }
-        // , image: imageView.image
         
         if let finishedSaving = finishedSaving {
             finishedSaving()
@@ -124,9 +123,9 @@ extension AddCourseViewController: UIImagePickerControllerDelegate, UINavigation
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[.editedImage] as? UIImage {
-//            self.imageView.image = image
+            self.imageView.image = image
         } else if let image = info[.originalImage] as? UIImage {
-//            self.imageView.image = image
+            self.imageView.image = image
         }
         
         dismiss(animated: true, completion: nil)

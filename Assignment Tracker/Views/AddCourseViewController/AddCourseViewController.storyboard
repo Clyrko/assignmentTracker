@@ -76,7 +76,7 @@
                         <outlet property="cancelButton" destination="fBH-Va-eYS" id="1Ar-95-PPu"/>
                         <outlet property="courseLabel" destination="m2V-UW-wxj" id="N1w-GM-xRa"/>
                         <outlet property="courseTextField" destination="yJO-Jq-uQ6" id="1VJ-uM-pb5"/>
-                        <outlet property="imageView" destination="zAq-de-OFJ" id="EdA-sW-d6f"/>
+                        <outlet property="imageView" destination="hcx-aB-gWO" id="FUk-iE-DuC"/>
                         <outlet property="saveButton" destination="KZH-Ke-ioL" id="MvW-2m-Cm1"/>
                     </connections>
                 </viewController>
