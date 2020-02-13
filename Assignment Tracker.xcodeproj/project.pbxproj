@@ -27,6 +27,7 @@
 		AC43542023ED94F8001F481E /* AddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43541F23ED94F8001F481E /* AddCourseViewController.swift */; };
 		AC43542323ED9A94001F481E /* PopupUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43542223ED9A94001F481E /* PopupUIView.swift */; };
 		AC43542523EDA647001F481E /* AppUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC43542423EDA647001F481E /* AppUIButton.swift */; };
+		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
 		ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B423F409A200D0549A /* DayModel.swift */; };
@@ -56,6 +57,9 @@
 		AC43541F23ED94F8001F481E /* AddCourseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseViewController.swift; sourceTree = "<group>"; };
 		AC43542223ED9A94001F481E /* PopupUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupUIView.swift; sourceTree = "<group>"; };
 		AC43542423EDA647001F481E /* AppUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUIButton.swift; sourceTree = "<group>"; };
+		ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
+		ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
 		ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-SemiBold.ttf"; sourceTree = "<group>"; };
 		ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssignmentsViewController.storyboard; sourceTree = "<group>"; };
 		ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentsViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				AC43542123ED9A59001F481E /* CustomControls */,
 				AC43540523EC5685001F481E /* Extentions */,
 				AC43540D23EC601F001F481E /* Herculanum.ttf */,
+				ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */,
+				ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */,
 				ACC1EA9523F091FB00B669EB /* Raleway-SemiBold.ttf */,
 				AC43540B23EC5E97001F481E /* Theme.swift */,
 				AC43540F23EC6239001F481E /* Colors.xcassets */,
@@ -191,6 +197,7 @@
 			children = (
 				ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */,
 				ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */,
+				ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */,
 			);
 			path = AssignmentsViewController;
 			sourceTree = "<group>";
@@ -298,6 +305,7 @@
 				AC43540923EC588E001F481E /* UIViewExtensions.swift in Sources */,
 				AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */,
 				AC43541423ED7D73001F481E /* UIButtonExtension.swift in Sources */,
+				ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */,
 				AC4353FC23EC2B98001F481E /* CourseData.swift in Sources */,
 				ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */,
 				AC43542523EDA647001F481E /* AppUIButton.swift in Sources */,

@@ -15,11 +15,13 @@ class AssignmentsViewController: UIViewController {
     
     var courseId: UUID!
     var courseModel: CourseModel?
+    var sectionHeaderHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
+        tableView.delegate = self
         
         CourseFunctions.readCourse(by: courseId) { [weak self] (model) in
             guard let self = self else { return }
@@ -30,6 +32,8 @@ class AssignmentsViewController: UIViewController {
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
         }
+        
+        sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "headerCell")?.contentView.bounds.height ?? 0
     }
     
     @IBAction func back(_ sender: UIButton) {
@@ -37,17 +41,31 @@ class AssignmentsViewController: UIViewController {
     }
 }
 
-extension AssignmentsViewController: UITableViewDataSource {
+extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return courseModel?.dayModels.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let course = courseModel?.dayModels[section].course ?? ""
-        let subtitle = courseModel?.dayModels[section].subtitle ?? ""
-        return "\(course) - \(subtitle)"
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return sectionHeaderHeight
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let dayModel = courseModel?.dayModels[section]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "headerCell") as! HeaderTableViewCell
+        cell.setup(model: dayModel!)
+        
+        return cell.contentView
+    }
+    
+//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        let course = courseModel?.dayModels[section].course ?? ""
+//        let subtitle = courseModel?.dayModels[section].subtitle ?? ""
+//        return "\(course) - \(subtitle)"
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courseModel?.dayModels[section].assignmentModels.count ?? 0
