@@ -131,6 +131,7 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         let storyboard = UIStoryboard(name: String(describing: AssignmentsViewController.self), bundle: nil)
         let vc = storyboard.instantiateInitialViewController() as! AssignmentsViewController
         vc.courseId = course.id
+        vc.courseCourse = course.course
          navigationController?.pushViewController(vc, animated: true)
     }
 }

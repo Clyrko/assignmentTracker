@@ -14,11 +14,14 @@ class AssignmentsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var courseId: UUID!
+    var courseCourse = ""
     var courseModel: CourseModel?
     var sectionHeaderHeight: CGFloat = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = courseCourse
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -28,7 +31,6 @@ class AssignmentsViewController: UIViewController {
             self.courseModel = model
             
             guard let model = model else { return }
-            self.title = model.course
             self.backgroundImageView.image = model.image
             self.tableView.reloadData()
         }
