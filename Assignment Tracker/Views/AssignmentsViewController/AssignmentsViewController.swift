@@ -12,6 +12,7 @@ class AssignmentsViewController: UIViewController {
     
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addButton: AppUIButton!
     
     var courseId: UUID!
     var courseCourse = ""
@@ -22,6 +23,7 @@ class AssignmentsViewController: UIViewController {
         super.viewDidLoad()
         
         title = courseCourse
+        addButton.createFloatingButtonAction()
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -40,6 +42,29 @@ class AssignmentsViewController: UIViewController {
     
     @IBAction func back(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func addAction(_ sender: AppUIButton) {
+        let alert = UIAlertController(title: "Which one will you like to add?", message: nil, preferredStyle: .actionSheet)
+        let dayAction =  UIAlertAction(title: "Day", style: .default, handler: handleAddDay)
+        let assignmentAction = UIAlertAction(title: "Assignment", style: .default) { (action) in
+            print("Add a New Assignment")
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(dayAction)
+        alert.addAction(assignmentAction)
+        alert.addAction(cancelAction)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
+        
+        alert.view.tintColor = Theme.tintColor
+        
+        present(alert, animated: true)
+    }
+    
+    func handleAddDay(action: UIAlertAction) {
+        print("Add a New Day")
     }
 }
 

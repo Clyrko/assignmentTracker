@@ -25,11 +25,11 @@ class CoursesViewController: UIViewController {
         
         CourseFunctions.readCourse(completion: { [unowned self] in
             self.tableView.reloadData()
-            
+
             if CourseData.courseModels.count > 0 {
                 if UserDefaults.standard.bool(forKey: self.seenCourseHelp)  == false {
                     self.view.addSubview(self.helpView)
-                    self.helpView.frame = self.view.frame
+                    self.helpView.frame = self.view.bounds
                 }
             }
         })
@@ -37,7 +37,6 @@ class CoursesViewController: UIViewController {
         
         view.addSubview(helpView)
         helpView.frame = view.frame
-        
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingButtonAction()
     }

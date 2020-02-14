@@ -129,14 +129,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-rK-pyd" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="338" y="806" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9eA-9z-dYS"/>
+                                    <constraint firstAttribute="width" constant="56" id="OFv-rb-bwA"/>
+                                </constraints>
+                                <state key="normal" image="icons8-plus"/>
+                                <connections>
+                                    <action selector="addAction:" destination="uff-XB-kHM" eventType="touchUpInside" id="3J9-8V-Z0v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0bi-Bz-C0c" firstAttribute="top" secondItem="yOh-cT-fWh" secondAttribute="top" id="4NU-8N-9aL"/>
                             <constraint firstAttribute="bottom" secondItem="0bi-Bz-C0c" secondAttribute="bottom" id="87r-Ds-Nez"/>
+                            <constraint firstItem="4jr-Dt-ZHd" firstAttribute="trailing" secondItem="rvR-rK-pyd" secondAttribute="trailing" constant="20" id="GnQ-c6-JNE"/>
                             <constraint firstItem="0bi-Bz-C0c" firstAttribute="leading" secondItem="yOh-cT-fWh" secondAttribute="leading" id="MJc-kN-HDX"/>
                             <constraint firstItem="sZK-m6-93P" firstAttribute="top" secondItem="4jr-Dt-ZHd" secondAttribute="top" id="PUy-fF-IZl"/>
                             <constraint firstItem="0bi-Bz-C0c" firstAttribute="trailing" secondItem="yOh-cT-fWh" secondAttribute="trailing" id="cIm-Ng-DlG"/>
+                            <constraint firstItem="4jr-Dt-ZHd" firstAttribute="bottom" secondItem="rvR-rK-pyd" secondAttribute="bottom" id="iEF-Sc-cbm"/>
                             <constraint firstItem="4jr-Dt-ZHd" firstAttribute="trailing" secondItem="sZK-m6-93P" secondAttribute="trailing" id="iP0-kc-USI"/>
                             <constraint firstItem="sZK-m6-93P" firstAttribute="leading" secondItem="4jr-Dt-ZHd" secondAttribute="leading" id="m9I-nV-EhW"/>
                             <constraint firstAttribute="bottom" secondItem="sZK-m6-93P" secondAttribute="bottom" id="xFs-tR-lZx"/>
@@ -144,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="4jr-Dt-ZHd"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="rvR-rK-pyd" id="Xgw-u2-0oe"/>
                         <outlet property="backgroundImageView" destination="0bi-Bz-C0c" id="XrI-PP-YXS"/>
                         <outlet property="tableView" destination="sZK-m6-93P" id="zSZ-Wp-cpB"/>
                     </connections>
@@ -154,6 +168,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-plus" width="50" height="50"/>
         <namedColor name="Accent">
             <color red="0.74901960784313726" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
