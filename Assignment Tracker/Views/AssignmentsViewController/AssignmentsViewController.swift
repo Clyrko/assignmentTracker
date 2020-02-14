@@ -61,26 +61,19 @@ extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate 
         return cell.contentView
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        let course = courseModel?.dayModels[section].course ?? ""
-//        let subtitle = courseModel?.dayModels[section].subtitle ?? ""
-//        return "\(course) - \(subtitle)"
-//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courseModel?.dayModels[section].assignmentModels.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "cell ")
-        }
+        let model = courseModel?.dayModels[indexPath.section].assignmentModels[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! AssignmentTableViewCell
         
-        cell?.textLabel?.text = courseModel?.dayModels[indexPath.section].assignmentModels[indexPath.row].course
+        cell.setup(model: model!)
         
-        return cell!
+        return cell
     }
     
 }

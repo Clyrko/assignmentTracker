@@ -10,7 +10,8 @@ import UIKit
 
 class Theme {
     static let mainFontName = "Raleway-SemiBold"
-    static let bodyFontName = "aleway-Light"
+    static let bodyFontName = "Raleway-Light"
+    static let bodyFontNameExtraBold = "Raleway-ExtraBold"
     static let bodyFontNameBold = "Raleway-Bold"
     static let Accent = UIColor(named: "Accent")
     static let backgroundColor = UIColor(named: "Background")

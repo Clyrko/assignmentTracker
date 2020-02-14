@@ -47,6 +47,7 @@
 		<string>Raleway-SemiBold.ttf</string>
 		<string>Raleway-Light.ttf</string>
 		<string>Raleway-Bold.ttf</string>
+		<string>Raleway-ExtraBold.ttf</string>
 	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Use photos to add more details to your course</string>
