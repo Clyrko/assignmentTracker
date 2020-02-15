@@ -64,7 +64,9 @@ class AssignmentsViewController: UIViewController {
     }
     
     func handleAddDay(action: UIAlertAction) {
-        print("Add a New Day")
+        let storyboard = UIStoryboard(name: String(describing: AddDayViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController()!
+        present(vc, animated: true)
     }
 }
 
