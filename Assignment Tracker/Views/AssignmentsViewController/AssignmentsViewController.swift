@@ -56,7 +56,7 @@ class AssignmentsViewController: UIViewController {
         alert.addAction(assignmentAction)
         alert.addAction(cancelAction)
         alert.popoverPresentationController?.sourceView = sender
-        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0)
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: sender.bounds.height)
         
         alert.view.tintColor = Theme.tintColor
         

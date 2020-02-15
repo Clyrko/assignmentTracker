@@ -38,7 +38,7 @@ class AddCourseViewController: UIViewController {
         if let index = courseIndexToEdit {
             let course = CourseData.courseModels[index]
             courseTextField.text = course.course
-//            imageView.image = course.image
+            imageView.image = course.image
             courseLabel.text = "Edit Course"
         }
     
