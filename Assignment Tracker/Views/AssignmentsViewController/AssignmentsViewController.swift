@@ -75,9 +75,12 @@ class AssignmentsViewController: UIViewController {
         vc.finishedSaving = { [weak self] dayModel in
             guard let self = self else { return }
             
-            let indexArray = [self.courseModel?.dayModels.count ?? 0]
+//            let indexArray = [self.courseModel?.dayModels.count ?? 0]
             
             self.courseModel?.dayModels.append(dayModel)
+            
+            let indexArray = [self.courseModel?.dayModels.firstIndex(of: dayModel) ?? 0 ]
+            
             self.tableView.insertSections(IndexSet(indexArray), with: UITableView.RowAnimation.automatic)
         }
         present(vc, animated: true)

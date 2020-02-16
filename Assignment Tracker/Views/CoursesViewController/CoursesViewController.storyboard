@@ -37,15 +37,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4R-as-Etx">
-                                                    <rect key="frame" x="15" y="10" width="381" height="136"/>
+                                                    <rect key="frame" x="12" y="10" width="383" height="136"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpd-j0-Nu2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="381" height="136"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="383" height="136"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0f-l9-rh0">
-                                                            <rect key="frame" x="6" y="30" width="363" height="70"/>
+                                                            <rect key="frame" x="4" y="30" width="364" height="69"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,7 +67,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Z-2q-EGT">
-                                <rect key="frame" x="338" y="718" width="56" height="56"/>
+                                <rect key="frame" x="338" y="708" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="eaO-0c-Ael"/>
                                     <constraint firstAttribute="width" constant="56" id="szG-4G-z8i"/>
@@ -80,7 +80,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gIh-0X-p9w" firstAttribute="bottom" secondItem="Z9Z-2q-EGT" secondAttribute="bottom" id="5J7-GC-Tgn"/>
+                            <constraint firstItem="gIh-0X-p9w" firstAttribute="bottom" secondItem="Z9Z-2q-EGT" secondAttribute="bottom" constant="10" id="5J7-GC-Tgn"/>
                             <constraint firstItem="gIh-0X-p9w" firstAttribute="trailing" secondItem="Z9Z-2q-EGT" secondAttribute="trailing" constant="20" id="kVT-B0-lcN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gIh-0X-p9w"/>
@@ -179,10 +179,10 @@
         <image name="editSwipe" width="346" height="135"/>
         <image name="icons8-plus" width="50" height="50"/>
         <namedColor name="Accent">
-            <color red="0.74901960784313726" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.72941176470588232" green="0.30588235294117649" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tint">
-            <color red="0.54509803921568623" green="0.53725490196078429" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.99215686274509807" green="0.72549019607843135" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <color key="tintColor" name="Tint"/>

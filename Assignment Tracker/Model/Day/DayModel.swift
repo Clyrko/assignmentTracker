@@ -25,3 +25,15 @@ struct DayModel {
         
     }
 }
+
+extension DayModel: Comparable {
+    static func < (lhs: DayModel, rhs: DayModel) -> Bool {
+        return lhs.course < rhs.course
+    }
+    
+    static func == (lhs: DayModel, rhs: DayModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    
+}

@@ -26,7 +26,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="OwL-Er-ZGm">
-                                    <rect key="frame" x="0.0" y="172" width="414" height="70"/>
+                                    <rect key="frame" x="0.0" y="172" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
@@ -135,7 +135,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvR-rK-pyd" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="338" y="806" width="56" height="56"/>
+                                <rect key="frame" x="338" y="796" width="56" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="9eA-9z-dYS"/>
                                     <constraint firstAttribute="width" constant="56" id="OFv-rb-bwA"/>
@@ -154,7 +154,7 @@
                             <constraint firstItem="0bi-Bz-C0c" firstAttribute="leading" secondItem="yOh-cT-fWh" secondAttribute="leading" id="MJc-kN-HDX"/>
                             <constraint firstItem="sZK-m6-93P" firstAttribute="top" secondItem="4jr-Dt-ZHd" secondAttribute="top" id="PUy-fF-IZl"/>
                             <constraint firstItem="0bi-Bz-C0c" firstAttribute="trailing" secondItem="yOh-cT-fWh" secondAttribute="trailing" id="cIm-Ng-DlG"/>
-                            <constraint firstItem="4jr-Dt-ZHd" firstAttribute="bottom" secondItem="rvR-rK-pyd" secondAttribute="bottom" id="iEF-Sc-cbm"/>
+                            <constraint firstItem="4jr-Dt-ZHd" firstAttribute="bottom" secondItem="rvR-rK-pyd" secondAttribute="bottom" constant="10" id="iEF-Sc-cbm"/>
                             <constraint firstItem="4jr-Dt-ZHd" firstAttribute="trailing" secondItem="sZK-m6-93P" secondAttribute="trailing" id="iP0-kc-USI"/>
                             <constraint firstItem="sZK-m6-93P" firstAttribute="leading" secondItem="4jr-Dt-ZHd" secondAttribute="leading" id="m9I-nV-EhW"/>
                             <constraint firstAttribute="bottom" secondItem="sZK-m6-93P" secondAttribute="bottom" id="xFs-tR-lZx"/>
@@ -175,7 +175,7 @@
     <resources>
         <image name="icons8-plus" width="50" height="50"/>
         <namedColor name="Accent">
-            <color red="0.74901960784313726" green="0.2196078431372549" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.72941176470588232" green="0.30588235294117649" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <color key="tintColor" name="Tint"/>

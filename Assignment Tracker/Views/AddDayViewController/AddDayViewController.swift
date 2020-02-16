@@ -43,4 +43,8 @@ class AddDayViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
 }

@@ -12,7 +12,18 @@ struct CourseModel {
     let id: UUID
     var course: String
     var image: UIImage?
-    var dayModels = [DayModel]()
+    var dayModels = [DayModel]() {
+        didSet {
+            // Called when a new value is assigned to dayModels
+//            dayModels = dayModels.sorted(by: { (dayModel1, dayModel2) -> Bool in
+//                dayModel1.course < dayModel2.course
+//            })
+//
+//            dayModels = dayModels.sorted(by: { $0.course < $1.course })
+            
+            dayModels = dayModels.sorted(by: <)
+        }
+    }
     
     init(course: String, image: UIImage? = nil, dayModels: [DayModel]? = nil) {
         id = UUID()
