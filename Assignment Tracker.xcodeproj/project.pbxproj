@@ -32,6 +32,7 @@
 		AC9B344523F8A20A00D1EE70 /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344423F8A20A00D1EE70 /* AddDayViewController.swift */; };
 		AC9B344723F8A96000D1EE70 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */; };
 		AC9B344923F948DF00D1EE70 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */; };
+		AC9B344B23F94EB300D1EE70 /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */; };
 		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
@@ -68,6 +69,7 @@
 		AC9B344423F8A20A00D1EE70 /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				ACDAE6B423F409A200D0549A /* DayModel.swift */,
+				AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */,
 			);
 			path = Day;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				AC43542023ED94F8001F481E /* AddCourseViewController.swift in Sources */,
 				AC4353FA23EC2A05001F481E /* CourseFunctions.swift in Sources */,
 				AC43540223EC3412001F481E /* CoursesViewController.swift in Sources */,
+				AC9B344B23F94EB300D1EE70 /* DayFunctions.swift in Sources */,
 				AC43542323ED9A94001F481E /* PopupUIView.swift in Sources */,
 				AC9B344523F8A20A00D1EE70 /* AddDayViewController.swift in Sources */,
 			);

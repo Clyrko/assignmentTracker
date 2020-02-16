@@ -11,6 +11,8 @@ import UIKit
 class CourseFunctions {
     
     static func createCourse(courseModel: CourseModel) {
+        // Replace with real data store code 
+        
         CourseData.courseModels.append(courseModel)
     }
     

@@ -34,13 +34,9 @@ class AddDayViewController: UIViewController {
         
         guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         
-        
-//        if let index = courseIndexToEdit {
-//            CourseFunctions.updateCourse(at: index, course: newCourseName, image: imageView.image)
-//        } else {
-//            CourseFunctions.createCourse(courseModel: CourseModel(course: newCourseName, image: imageView.image))
-//        }
-        
+        let dayModel = DayModel(course: newTitle, subtitle: subtitleTextField.text ?? "", data: nil)
+        DayFunctions.createDay(at: 0, using: dayModel)
+
         if let finishedSaving = finishedSaving {
             finishedSaving()
         }
