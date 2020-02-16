@@ -20,7 +20,9 @@ class HeaderTableViewCell: UITableViewCell {
     }
 
     func setup(model: DayModel) {
-        courseLabel.text = model.course
+        
+        courseLabel.text = DateFormatter.localizedString(from: model.course, dateStyle: .medium, timeStyle: .none)
         subtitleLabel.text = model.subtitle
+        
     }
 }

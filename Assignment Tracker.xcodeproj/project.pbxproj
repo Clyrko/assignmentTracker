@@ -36,6 +36,7 @@
 		AC9B344C23F96B0A00D1EE70 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC0C354F23F6B8C500DF621C /* Raleway-ExtraBold.ttf */; };
 		AC9B344D23F96B0F00D1EE70 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */; };
 		AC9B344E23F96B1200D1EE70 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */; };
+		AC9B345023F9863400D1EE70 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344F23F9863400D1EE70 /* DateExtension.swift */; };
 		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
@@ -73,6 +74,7 @@
 		AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
+		AC9B344F23F9863400D1EE70 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -170,10 +172,11 @@
 		AC43540523EC5685001F481E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				AC9B344F23F9863400D1EE70 /* DateExtension.swift */,
 				AC43541323ED7D73001F481E /* UIButtonExtension.swift */,
 				AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */,
-				AC43540823EC588E001F481E /* UIViewExtension.swift */,
 				AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */,
+				AC43540823EC588E001F481E /* UIViewExtension.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC43540423EC4A5D001F481E /* CoursesTableViewCell.swift in Sources */,
+				AC9B345023F9863400D1EE70 /* DateExtension.swift in Sources */,
 				AC43540C23EC5E97001F481E /* Theme.swift in Sources */,
 				ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */,
 				AC288C6823F41F5300DE5AD1 /* MockData.swift in Sources */,

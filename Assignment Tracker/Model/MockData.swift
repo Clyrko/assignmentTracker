@@ -20,11 +20,11 @@ class MockData {
     static func createmockDayModelData() -> [DayModel] {
         var dayModels = [DayModel]()
         
-        dayModels.append(DayModel(course: "April 18", subtitle: "Assignments", data: createMockAssignmentModelData(sectionTitle: "April 18")))
-        dayModels.append(DayModel(course: "April 19", subtitle: "Due", data: createMockAssignmentModelData(sectionTitle: "April 19")))
-        dayModels.append(DayModel(course: "April 20", subtitle: "Scuba Diving!", data: createMockAssignmentModelData(sectionTitle: "April 20")))
-        dayModels.append(DayModel(course: "April 21", subtitle: "Volunteering", data: createMockAssignmentModelData(sectionTitle: "April 21")))
-        dayModels.append(DayModel(course: "April 22", subtitle: "Time to go back home", data: createMockAssignmentModelData(sectionTitle: "April 22")))
+        dayModels.append(DayModel(course: Date(), subtitle: "Assignments", data: createMockAssignmentModelData(sectionTitle: "April 18")))
+        dayModels.append(DayModel(course: Date().add(days: 1), subtitle: "Due", data: createMockAssignmentModelData(sectionTitle: "April 19")))
+        dayModels.append(DayModel(course: Date().add(days: 2), subtitle: "Scuba Diving!", data: createMockAssignmentModelData(sectionTitle: "April 20")))
+        dayModels.append(DayModel(course: Date().add(days: 3), subtitle: "Volunteering", data: createMockAssignmentModelData(sectionTitle: "April 21")))
+        dayModels.append(DayModel(course: Date().add(days: 4), subtitle: "Time to go back home", data: createMockAssignmentModelData(sectionTitle: "April 22")))
         
         return dayModels
     }

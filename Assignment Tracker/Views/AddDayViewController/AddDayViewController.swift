@@ -32,9 +32,9 @@ class AddDayViewController: UIViewController {
     }
     @IBAction func save(_ sender: Any) {
         
-        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
+//        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         
-        let dayModel = DayModel(course: newTitle, subtitle: subtitleTextField.text ?? "", data: nil)
+        let dayModel = DayModel(course: Date(), subtitle: subtitleTextField.text ?? "", data: nil)
         DayFunctions.createDay(at: courseIndex, using: dayModel)
 
         if let finishedSaving = finishedSaving {
