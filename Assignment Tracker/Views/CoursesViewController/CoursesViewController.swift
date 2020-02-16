@@ -127,8 +127,8 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let course = CourseData.courseModels[indexPath.row]
         
-        let storyboard = UIStoryboard(name: String(describing: AssignmentsViewController.self), bundle: nil)
-        let vc = storyboard.instantiateInitialViewController() as! AssignmentsViewController
+        let vc = AssignmentsViewController.getInstance() as! AssignmentsViewController
+        
         vc.courseId = course.id
         vc.courseCourse = course.course
          navigationController?.pushViewController(vc, animated: true)

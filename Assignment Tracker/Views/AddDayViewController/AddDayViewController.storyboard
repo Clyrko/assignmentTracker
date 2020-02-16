@@ -13,7 +13,7 @@
         <!--Add Day View Controller-->
         <scene sceneID="lCj-0j-2kh">
             <objects>
-                <viewController id="MPH-ME-ToU" customClass="AddDayViewController" customModule="Assignment_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="MPH-ME-ToU" customClass="AddDayViewController" customModule="Assignment_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lWm-hi-MsV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,11 +40,17 @@
                                         <rect key="frame" x="10" y="148" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="MPH-ME-ToU" eventType="touchUpInside" id="PzK-48-jEb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rT-S3-ECv" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="232" y="148" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="MPH-ME-ToU" eventType="touchUpInside" id="0bx-Tm-yEm"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y4T-RL-byr">
                                         <rect key="frame" x="7" y="113" width="321" height="30"/>
