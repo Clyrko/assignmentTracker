@@ -19,6 +19,17 @@ class AssignmentsViewController: UIViewController {
     var courseModel: CourseModel?
     var sectionHeaderHeight: CGFloat = 0.0
     
+    fileprivate func updateTableViewWithCourseData() {
+        CourseFunctions.readCourse(by: courseId) { [weak self] (model) in
+            guard let self = self else { return }
+            self.courseModel = model
+            
+            guard let model = model else { return }
+            self.backgroundImageView.image = model.image
+            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,14 +39,7 @@ class AssignmentsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        CourseFunctions.readCourse(by: courseId) { [weak self] (model) in
-            guard let self = self else { return }
-            self.courseModel = model
-            
-            guard let model = model else { return }
-            self.backgroundImageView.image = model.image
-            self.tableView.reloadData()
-        }
+        updateTableViewWithCourseData()
         
         sectionHeaderHeight = tableView.dequeueReusableCell(withIdentifier: "headerCell")?.contentView.bounds.height ?? 0
     }
@@ -64,8 +68,14 @@ class AssignmentsViewController: UIViewController {
     }
     
     func handleAddDay(action: UIAlertAction) {
-        
-        let vc = AddDayViewController.getInstance()
+        let vc = AddDayViewController.getInstance() as! AddDayViewController
+        vc.courseIndex = CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
+            courseModel.id == courseId
+        })
+        vc.finishedSaving = { [weak self] in
+            guard let self = self else { return }
+            self.updateTableViewWithCourseData()
+        }
         present(vc, animated: true)
     }
 }

@@ -18,7 +18,7 @@ class AddDayViewController: UIViewController {
     
     
     var finishedSaving: (() -> ())?
-    var courseIndexToEdit: Int?
+    var courseIndex: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,7 @@ class AddDayViewController: UIViewController {
         guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         
         let dayModel = DayModel(course: newTitle, subtitle: subtitleTextField.text ?? "", data: nil)
-        DayFunctions.createDay(at: 0, using: dayModel)
+        DayFunctions.createDay(at: courseIndex, using: dayModel)
 
         if let finishedSaving = finishedSaving {
             finishedSaving()
