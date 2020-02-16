@@ -17,7 +17,7 @@ class AddDayViewController: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     
     
-    var finishedSaving: (() -> ())?
+    var finishedSaving: ((DayModel) -> ())?
     var courseIndex: Int!
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class AddDayViewController: UIViewController {
         DayFunctions.createDay(at: courseIndex, using: dayModel)
 
         if let finishedSaving = finishedSaving {
-            finishedSaving()
+            finishedSaving(dayModel)
         }
         dismiss(animated: true)
     }

@@ -72,9 +72,10 @@ class AssignmentsViewController: UIViewController {
         vc.courseIndex = CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
             courseModel.id == courseId
         })
-        vc.finishedSaving = { [weak self] in
+        vc.finishedSaving = { [weak self] dayModel in
             guard let self = self else { return }
-            self.updateTableViewWithCourseData()
+            self.courseModel?.dayModels.append(dayModel)
+            self.tableView.reloadData() 
         }
         present(vc, animated: true)
     }
