@@ -33,6 +33,9 @@
 		AC9B344723F8A96000D1EE70 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */; };
 		AC9B344923F948DF00D1EE70 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */; };
 		AC9B344B23F94EB300D1EE70 /* DayFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */; };
+		AC9B344C23F96B0A00D1EE70 /* Raleway-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC0C354F23F6B8C500DF621C /* Raleway-ExtraBold.ttf */; };
+		AC9B344D23F96B0F00D1EE70 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */; };
+		AC9B344E23F96B1200D1EE70 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */; };
 		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
@@ -308,10 +311,13 @@
 				AC43541023EC6239001F481E /* Colors.xcassets in Resources */,
 				AC4353E923EC16DC001F481E /* LaunchScreen.storyboard in Resources */,
 				AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */,
+				AC9B344E23F96B1200D1EE70 /* Raleway-Light.ttf in Resources */,
 				AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */,
 				AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */,
 				AC43541D23ED94C7001F481E /* AddCourseViewController.storyboard in Resources */,
+				AC9B344C23F96B0A00D1EE70 /* Raleway-ExtraBold.ttf in Resources */,
 				ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */,
+				AC9B344D23F96B0F00D1EE70 /* Raleway-Bold.ttf in Resources */,
 				AC39EAD023F1A060001D3CCA /* Raleway-SemiBold.ttf in Resources */,
 				AC9B344323F8A1D100D1EE70 /* AddDayViewController.storyboard in Resources */,
 			);
