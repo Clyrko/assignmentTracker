@@ -49,20 +49,8 @@ class AddCourseViewController: UIViewController {
     }
     @IBAction func save(_ sender: Any) {
         
-        courseTextField.rightViewMode = .never
+        guard courseTextField.hasValue, let newCourseName = courseTextField.text else { return }
         
-        guard courseTextField.text != "", let newCourseName = courseTextField.text else {
-            
-            courseTextField.layer.borderColor = UIColor.red.cgColor
-            courseTextField.layer.borderWidth = 2
-            courseTextField.layer.cornerRadius = 5
-            
-            courseTextField.placeholder = "Required!"
-            
-            courseTextField.rightViewMode = .unlessEditing
-            
-            return
-        }
         
         if let index = courseIndexToEdit {
             CourseFunctions.updateCourse(at: index, course: newCourseName, image: imageView.image)

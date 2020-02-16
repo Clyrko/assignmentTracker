@@ -25,10 +25,6 @@ class AddDayViewController: UIViewController {
         
         courseLabel.font = UIFont(name: Theme.mainFontName, size: 40)
         
-        courseLabel.layer.shadowOpacity = 1
-        courseLabel.layer.shadowColor = UIColor.white.cgColor
-        courseLabel.layer.shadowOffset = CGSize.zero
-        courseLabel.layer.shadowRadius = 5
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -36,20 +32,8 @@ class AddDayViewController: UIViewController {
     }
     @IBAction func save(_ sender: Any) {
         
-        titleTextField.rightViewMode = .never
+        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         
-        guard titleTextField.text != "", let newCourseName = titleTextField.text else {
-            
-            titleTextField.layer.borderColor = UIColor.red.cgColor
-            titleTextField.layer.borderWidth = 2
-            titleTextField.layer.cornerRadius = 5
-            
-            titleTextField.placeholder = "Required!"
-            
-            titleTextField.rightViewMode = .unlessEditing
-            
-            return
-        }
         
 //        if let index = courseIndexToEdit {
 //            CourseFunctions.updateCourse(at: index, course: newCourseName, image: imageView.image)

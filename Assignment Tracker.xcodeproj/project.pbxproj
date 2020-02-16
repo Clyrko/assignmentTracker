@@ -31,6 +31,7 @@
 		AC9B344323F8A1D100D1EE70 /* AddDayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9B344223F8A1D100D1EE70 /* AddDayViewController.storyboard */; };
 		AC9B344523F8A20A00D1EE70 /* AddDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344423F8A20A00D1EE70 /* AddDayViewController.swift */; };
 		AC9B344723F8A96000D1EE70 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */; };
+		AC9B344923F948DF00D1EE70 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */; };
 		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
@@ -66,6 +67,7 @@
 		AC9B344223F8A1D100D1EE70 /* AddDayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddDayViewController.storyboard; sourceTree = "<group>"; };
 		AC9B344423F8A20A00D1EE70 /* AddDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDayViewController.swift; sourceTree = "<group>"; };
 		AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -163,8 +165,9 @@
 		AC43540523EC5685001F481E /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				AC43540823EC588E001F481E /* UIViewExtension.swift */,
 				AC43541323ED7D73001F481E /* UIButtonExtension.swift */,
+				AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */,
+				AC43540823EC588E001F481E /* UIViewExtension.swift */,
 				AC9B344623F8A96000D1EE70 /* UIViewControllerExtension.swift */,
 			);
 			path = Extentions;
@@ -323,6 +326,7 @@
 				ACDAE6B523F409A200D0549A /* DayModel.swift in Sources */,
 				AC288C6823F41F5300DE5AD1 /* MockData.swift in Sources */,
 				ACDAE6BA23F40F1E00D0549A /* AssignmentTypeEnum.swift in Sources */,
+				AC9B344923F948DF00D1EE70 /* UITextFieldExtension.swift in Sources */,
 				AC9B344723F8A96000D1EE70 /* UIViewControllerExtension.swift in Sources */,
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
 				ACDAE6B823F40DD100D0549A /* AssignmentModel.swift in Sources */,

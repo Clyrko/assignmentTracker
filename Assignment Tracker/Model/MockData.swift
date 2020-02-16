@@ -20,8 +20,8 @@ class MockData {
     static func createmockDayModelData() -> [DayModel] {
         var dayModels = [DayModel]()
         
-        dayModels.append(DayModel(course: "April 18", subtitle: "Departure", data: createMockAssignmentModelData(sectionTitle: "April 18")))
-        dayModels.append(DayModel(course: "April 19", subtitle: "Exploring", data: createMockAssignmentModelData(sectionTitle: "April 19")))
+        dayModels.append(DayModel(course: "April 18", subtitle: "Assignments", data: createMockAssignmentModelData(sectionTitle: "April 18")))
+        dayModels.append(DayModel(course: "April 19", subtitle: "Due", data: createMockAssignmentModelData(sectionTitle: "April 19")))
         dayModels.append(DayModel(course: "April 20", subtitle: "Scuba Diving!", data: createMockAssignmentModelData(sectionTitle: "April 20")))
         dayModels.append(DayModel(course: "April 21", subtitle: "Volunteering", data: createMockAssignmentModelData(sectionTitle: "April 21")))
         dayModels.append(DayModel(course: "April 22", subtitle: "Time to go back home", data: createMockAssignmentModelData(sectionTitle: "April 22")))
@@ -34,10 +34,10 @@ class MockData {
         
         switch sectionTitle {
         case "April 18":
-            models.append(AssignmentModel(course: "SLC", subTitle: "12:25 - 13:45", assignmentType: AssignmentType.group))
-            models.append(AssignmentModel(course: "LAX", subTitle: "17:00 - 11:00", assignmentType: AssignmentType.group))
+            models.append(AssignmentModel(course: "Intro to CU", subTitle: "Group Presentation", assignmentType: AssignmentType.group))
+            models.append(AssignmentModel(course: "Programming 403", subTitle: "Group Presentation", assignmentType: AssignmentType.group))
         case "April 19":
-            models.append(AssignmentModel(course: "DPS", subTitle: "", assignmentType: AssignmentType.group))
+            models.append(AssignmentModel(course: "Intro to CU", subTitle: "", assignmentType: AssignmentType.group))
             models.append(AssignmentModel(course: "Bintang Kuta Hotel Checkin", subTitle: "Confirmation: AX76Y2", assignmentType: AssignmentType.test))
             models.append(AssignmentModel(course: "Pick up rental", subTitle: "Confirmation: 996464", assignmentType: AssignmentType.essay))
             models.append(AssignmentModel(course: "Island Excusion", subTitle: "Touring the island", assignmentType: AssignmentType.presentation))
