@@ -69,6 +69,7 @@ class AssignmentsViewController: UIViewController {
     
     func handleAddDay(action: UIAlertAction) {
         let vc = AddDayViewController.getInstance() as! AddDayViewController
+        vc.courseModel = courseModel
         vc.courseIndex = CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
             courseModel.id == courseId
         })
