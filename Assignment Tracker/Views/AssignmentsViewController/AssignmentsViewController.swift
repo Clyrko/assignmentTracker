@@ -51,9 +51,7 @@ class AssignmentsViewController: UIViewController {
     @IBAction func addAction(_ sender: AppUIButton) {
         let alert = UIAlertController(title: "Which one will you like to add?", message: nil, preferredStyle: .actionSheet)
         let dayAction =  UIAlertAction(title: "Day", style: .default, handler: handleAddDay)
-        let assignmentAction = UIAlertAction(title: "Assignment", style: .default) { (action) in
-            print("Add a New Assignment")
-        }
+        let assignmentAction = UIAlertAction(title: "Assignment", style: .default, handler: handleAddAssignment)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
         alert.addAction(dayAction)
@@ -65,6 +63,12 @@ class AssignmentsViewController: UIViewController {
         alert.view.tintColor = Theme.tintColor
         
         present(alert, animated: true)
+    }
+    
+    func handleAddAssignment(action: UIAlertAction) {
+        let vc = AddAssignmentViewController.getInstance() as! AddAssignmentViewController
+        
+        present(vc, animated: true)
     }
     
     func handleAddDay(action: UIAlertAction) {

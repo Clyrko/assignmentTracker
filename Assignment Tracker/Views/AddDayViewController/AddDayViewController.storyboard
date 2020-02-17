@@ -35,6 +35,7 @@
                                         <state key="normal" title="Cancel"/>
                                         <connections>
                                             <action selector="cancel:" destination="MPH-ME-ToU" eventType="touchUpInside" id="PzK-48-jEb"/>
+                                            <action selector="cancelButton:" destination="uS4-ZT-Nm0" eventType="touchUpInside" id="uCB-CO-uGt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rT-S3-ECv" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
@@ -79,6 +80,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iis-dZ-j67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uS4-ZT-Nm0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="173.59999999999999" y="97.601199400299862"/>
         </scene>

@@ -37,6 +37,8 @@
 		AC9B344D23F96B0F00D1EE70 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */; };
 		AC9B344E23F96B1200D1EE70 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */; };
 		AC9B345023F9863400D1EE70 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B344F23F9863400D1EE70 /* DateExtension.swift */; };
+		AC9B345823FB48EF00D1EE70 /* AddAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9B345723FB48EF00D1EE70 /* AddAssignmentViewController.swift */; };
+		AC9B345A23FB48FA00D1EE70 /* AddAssignmentViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9B345923FB48FA00D1EE70 /* AddAssignmentViewController.storyboard */; };
 		ACA5FB4623F5C9E1001C9773 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */; };
 		ACDAE6B023F3F90600D0549A /* AssignmentsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDAE6AF23F3F90600D0549A /* AssignmentsViewController.storyboard */; };
 		ACDAE6B223F3F91600D0549A /* AssignmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDAE6B123F3F91600D0549A /* AssignmentsViewController.swift */; };
@@ -75,6 +77,8 @@
 		AC9B344823F948DF00D1EE70 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		AC9B344A23F94EB300D1EE70 /* DayFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayFunctions.swift; sourceTree = "<group>"; };
 		AC9B344F23F9863400D1EE70 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		AC9B345723FB48EF00D1EE70 /* AddAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentViewController.swift; sourceTree = "<group>"; };
+		AC9B345923FB48FA00D1EE70 /* AddAssignmentViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddAssignmentViewController.storyboard; sourceTree = "<group>"; };
 		ACA5FB4523F5C9E1001C9773 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		ACA5FB4723F5D244001C9773 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		ACA5FB4823F5D244001C9773 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				AC43541E23ED94CD001F481E /* AddCourseViewController */,
 				ACDAE6AE23F3F8CA00D0549A /* AssignmentsViewController */,
 				AC9B344123F8A1B200D1EE70 /* AddDayViewController */,
+				AC9B345623FB48C400D1EE70 /* AddAssignmentViewController */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +227,15 @@
 				AC9B344423F8A20A00D1EE70 /* AddDayViewController.swift */,
 			);
 			path = AddDayViewController;
+			sourceTree = "<group>";
+		};
+		AC9B345623FB48C400D1EE70 /* AddAssignmentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AC9B345923FB48FA00D1EE70 /* AddAssignmentViewController.storyboard */,
+				AC9B345723FB48EF00D1EE70 /* AddAssignmentViewController.swift */,
+			);
+			path = AddAssignmentViewController;
 			sourceTree = "<group>";
 		};
 		ACDAE6AE23F3F8CA00D0549A /* AssignmentsViewController */ = {
@@ -316,6 +330,7 @@
 				AC43540023EC3399001F481E /* CoursesViewController.storyboard in Resources */,
 				AC9B344E23F96B1200D1EE70 /* Raleway-Light.ttf in Resources */,
 				AC43540E23EC601F001F481E /* Herculanum.ttf in Resources */,
+				AC9B345A23FB48FA00D1EE70 /* AddAssignmentViewController.storyboard in Resources */,
 				AC4353E623EC16DC001F481E /* Assets.xcassets in Resources */,
 				AC43541D23ED94C7001F481E /* AddCourseViewController.storyboard in Resources */,
 				AC9B344C23F96B0A00D1EE70 /* Raleway-ExtraBold.ttf in Resources */,
@@ -344,6 +359,7 @@
 				AC4353F823EC29ED001F481E /* CourseModel.swift in Sources */,
 				ACDAE6B823F40DD100D0549A /* AssignmentModel.swift in Sources */,
 				AC43540923EC588E001F481E /* UIViewExtension.swift in Sources */,
+				AC9B345823FB48EF00D1EE70 /* AddAssignmentViewController.swift in Sources */,
 				AC4353DF23EC16D8001F481E /* AppDelegate.swift in Sources */,
 				AC0C354C23F6A5EF00DF621C /* AssignmentTableViewCell.swift in Sources */,
 				AC43541423ED7D73001F481E /* UIButtonExtension.swift in Sources */,
