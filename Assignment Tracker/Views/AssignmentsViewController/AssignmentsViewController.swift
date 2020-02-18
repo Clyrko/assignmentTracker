@@ -54,6 +54,8 @@ class AssignmentsViewController: UIViewController {
         let assignmentAction = UIAlertAction(title: "Assignment", style: .default, handler: handleAddAssignment)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         
+        assignmentAction.isEnabled = courseModel!.dayModels.count > 0
+        
         alert.addAction(dayAction)
         alert.addAction(assignmentAction)
         alert.addAction(cancelAction)
@@ -67,6 +69,7 @@ class AssignmentsViewController: UIViewController {
     
     func handleAddAssignment(action: UIAlertAction) {
         let vc = AddAssignmentViewController.getInstance() as! AddAssignmentViewController
+        vc.courseModel = courseModel
         
         present(vc, animated: true)
     }
