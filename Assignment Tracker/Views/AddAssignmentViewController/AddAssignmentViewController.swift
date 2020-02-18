@@ -15,8 +15,8 @@ class AddAssignmentViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var subtitleTextField: UITextField!
     @IBOutlet weak var cancelButton: UIButton!
-    
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet var assignmentTypeButtons: [UIButton]!
     
     
     var courseIndex: Int!
@@ -31,8 +31,29 @@ class AddAssignmentViewController: UIViewController {
         dayPickerView.delegate = self
     }
     
+    @IBAction func AssignmentTypeSelected(_ sender: UIButton) {
+        
+        assignmentTypeButtons.forEach({ $0.tintColor = Theme.Accent })
+        
+        sender.tintColor = Theme.tintColor
+    }
+    
+    
     @IBAction func save(_ sender: UIButton) {
+        
+        let assignmentType: AssignmentType = getSelectedAssignmentType()
+        
         dismiss(animated: true)
+    }
+    
+    func getSelectedAssignmentType() -> AssignmentType {
+        for (index, button) in assignmentTypeButtons.enumerated() {
+            if button.tintColor == Theme.tintColor {
+                return AssignmentType(rawValue: index) ?? .essay
+            }
+        }
+        
+        return .essay
     }
     
     @IBAction func cancel(_ sender: UIButton) {

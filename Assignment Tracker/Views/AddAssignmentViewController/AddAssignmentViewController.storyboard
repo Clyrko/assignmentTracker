@@ -7,6 +7,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,9 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-N3-Sju" customClass="PopupUIView" customModule="Assignment_Tracker" customModuleProvider="target">
-                                <rect key="frame" x="16" y="50" width="343" height="350"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-N3-Sju" customClass="PopupUIView" customModule="Assignment_Tracker" customModuleProvider="target">
+                                <rect key="frame" x="16" y="50" width="343" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Assignment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXw-KY-BtJ">
                                         <rect key="frame" x="8" y="8" width="321" height="59"/>
@@ -30,7 +30,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-wk-9fz" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="298" width="100" height="44"/>
+                                        <rect key="frame" x="10" y="348" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Cancel"/>
                                         <connections>
@@ -38,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V52-HZ-jyH" customClass="AppUIButton" customModule="Assignment_Tracker" customModuleProvider="target">
-                                        <rect key="frame" x="232" y="298" width="100" height="44"/>
+                                        <rect key="frame" x="232" y="348" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
@@ -46,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJE-kq-6gA">
-                                        <rect key="frame" x="7" y="263" width="321" height="30"/>
+                                        <rect key="frame" x="7" y="313" width="321" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +56,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Are You Doing?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bf8-4p-SuD">
-                                        <rect key="frame" x="7" y="225" width="321" height="30"/>
+                                        <rect key="frame" x="7" y="275" width="321" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -65,16 +65,92 @@
                                             <action selector="done:" destination="cfL-N3-Gjf" eventType="primaryActionTriggered" id="k0e-Bv-pHS"/>
                                         </connections>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-yC-GLN">
+                                        <rect key="frame" x="16" y="198" width="311" height="44"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdx-v1-tsH">
+                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="iNQ-zd-pSN"/>
+                                                    <constraint firstAttribute="width" constant="44" id="n9o-wr-FYc"/>
+                                                </constraints>
+                                                <color key="tintColor" name="Tint"/>
+                                                <state key="normal" image="paperIcon"/>
+                                                <connections>
+                                                    <action selector="AssignmentTypeSelected:" destination="cfL-N3-Gjf" eventType="touchUpInside" id="WQf-xn-VBp"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBL-bz-mUP">
+                                                <rect key="frame" x="67" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="IxH-qc-Vms"/>
+                                                    <constraint firstAttribute="width" constant="44" id="sYb-XJ-ZAd"/>
+                                                </constraints>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="presentationIcon"/>
+                                                <connections>
+                                                    <action selector="AssignmentTypeSelected:" destination="cfL-N3-Gjf" eventType="touchUpInside" id="fQs-TZ-hSU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUQ-qv-0OK">
+                                                <rect key="frame" x="133.5" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="BSt-II-G6V"/>
+                                                    <constraint firstAttribute="width" constant="44" id="zeX-lO-H7r"/>
+                                                </constraints>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="groupIcon"/>
+                                                <connections>
+                                                    <action selector="AssignmentTypeSelected:" destination="cfL-N3-Gjf" eventType="touchUpInside" id="6hr-Iy-3zE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IaD-1I-oM1">
+                                                <rect key="frame" x="200.5" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="asI-7n-6MM"/>
+                                                    <constraint firstAttribute="height" constant="44" id="uk7-Se-wql"/>
+                                                </constraints>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="quizIcon"/>
+                                                <connections>
+                                                    <action selector="AssignmentTypeSelected:" destination="cfL-N3-Gjf" eventType="touchUpInside" id="Vgz-Ik-YCV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCl-FY-MUX">
+                                                <rect key="frame" x="267" y="0.0" width="44" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="44" id="s2H-EM-2Fn"/>
+                                                    <constraint firstAttribute="height" constant="44" id="znf-qZ-ZTP"/>
+                                                </constraints>
+                                                <color key="tintColor" name="Accent"/>
+                                                <state key="normal" image="testIcon"/>
+                                                <connections>
+                                                    <action selector="AssignmentTypeSelected:" destination="cfL-N3-Gjf" eventType="touchUpInside" id="vLG-ZG-OeE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cv-uU-moI">
-                                        <rect key="frame" x="0.0" y="61" width="343" height="161"/>
+                                        <rect key="frame" x="0.0" y="40" width="343" height="161"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </pickerView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" name="Tint"/>
+                                <constraints>
+                                    <constraint firstItem="C3y-yC-GLN" firstAttribute="leading" secondItem="bNM-N3-Sju" secondAttribute="leading" constant="16" id="DRp-Cn-ZRZ"/>
+                                    <constraint firstAttribute="height" constant="400" id="dVb-zD-lkl"/>
+                                    <constraint firstItem="C3y-yC-GLN" firstAttribute="centerY" secondItem="bNM-N3-Sju" secondAttribute="centerY" constant="20" id="g8M-ij-RuK"/>
+                                    <constraint firstAttribute="trailing" secondItem="C3y-yC-GLN" secondAttribute="trailing" constant="16" id="gz6-1K-VdK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40034623580000001" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bNM-N3-Sju" firstAttribute="top" secondItem="Sia-g6-wro" secondAttribute="top" constant="30" id="4tv-uc-hqr"/>
+                            <constraint firstItem="bNM-N3-Sju" firstAttribute="leading" secondItem="Sia-g6-wro" secondAttribute="leading" constant="16" id="RRy-bE-dHF"/>
+                            <constraint firstItem="Sia-g6-wro" firstAttribute="trailing" secondItem="bNM-N3-Sju" secondAttribute="trailing" constant="16" id="kmR-Sf-SiC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sia-g6-wro"/>
                     </view>
                     <connections>
@@ -84,6 +160,11 @@
                         <outlet property="saveButton" destination="V52-HZ-jyH" id="i70-Pg-DI3"/>
                         <outlet property="subtitleTextField" destination="lJE-kq-6gA" id="zT4-Wd-4HS"/>
                         <outlet property="titleTextField" destination="Bf8-4p-SuD" id="PME-90-Lmx"/>
+                        <outletCollection property="assignmentTypeButtons" destination="hdx-v1-tsH" collectionClass="NSMutableArray" id="HZU-0J-V2x"/>
+                        <outletCollection property="assignmentTypeButtons" destination="RBL-bz-mUP" collectionClass="NSMutableArray" id="MiN-9g-6aN"/>
+                        <outletCollection property="assignmentTypeButtons" destination="qUQ-qv-0OK" collectionClass="NSMutableArray" id="1ry-6q-jIM"/>
+                        <outletCollection property="assignmentTypeButtons" destination="IaD-1I-oM1" collectionClass="NSMutableArray" id="fV1-8S-NMf"/>
+                        <outletCollection property="assignmentTypeButtons" destination="sCl-FY-MUX" collectionClass="NSMutableArray" id="xcT-fL-h7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80h-Jb-a0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -92,6 +173,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="groupIcon" width="50" height="50"/>
+        <image name="paperIcon" width="80" height="80"/>
+        <image name="presentationIcon" width="100" height="100"/>
+        <image name="quizIcon" width="100" height="100"/>
+        <image name="testIcon" width="160" height="160"/>
+        <namedColor name="Accent">
+            <color red="0.72941176470588232" green="0.30588235294117649" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Tint">
             <color red="0.99215686274509807" green="0.72549019607843135" blue="0.15294117647058825" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum AssignmentType {
+enum AssignmentType: Int {
     case essay
     case presentation
     case group
