@@ -67,9 +67,25 @@ class AssignmentsViewController: UIViewController {
         present(alert, animated: true)
     }
     
+    fileprivate func getCourseIndex() -> Int? {
+        return CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
+            courseModel.id == courseId
+        })
+    }
+    
     func handleAddAssignment(action: UIAlertAction) {
         let vc = AddAssignmentViewController.getInstance() as! AddAssignmentViewController
         vc.courseModel = courseModel
+        vc.courseIndex = getCourseIndex()
+        vc.finishedSaving = { [weak self] dayIndex, assignmentModel in
+            guard let self = self else { return }
+            
+            self.courseModel?.dayModels[dayIndex].assignmentModels.append(assignmentModel)
+            
+            let row = (self.courseModel?.dayModels[dayIndex].assignmentModels.count)! - 1
+            let indexPath = IndexPath(row: row, section: dayIndex)
+            self.tableView.insertRows(at: [indexPath], with: .automatic)
+        }
         
         present(vc, animated: true)
     }
@@ -77,13 +93,10 @@ class AssignmentsViewController: UIViewController {
     func handleAddDay(action: UIAlertAction) {
         let vc = AddDayViewController.getInstance() as! AddDayViewController
         vc.courseModel = courseModel
-        vc.courseIndex = CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
-            courseModel.id == courseId
-        })
+        vc.courseIndex = getCourseIndex()
+        
         vc.finishedSaving = { [weak self] dayModel in
             guard let self = self else { return }
-            
-//            let indexArray = [self.courseModel?.dayModels.count ?? 0]
             
             self.courseModel?.dayModels.append(dayModel)
             

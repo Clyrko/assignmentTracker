@@ -19,6 +19,7 @@ class AddAssignmentViewController: UIViewController {
     @IBOutlet var assignmentTypeButtons: [UIButton]!
     
     
+    var finishedSaving: ((Int, AssignmentModel) -> ())?
     var courseIndex: Int!
     var courseModel: CourseModel!
     
@@ -41,7 +42,17 @@ class AddAssignmentViewController: UIViewController {
     
     @IBAction func save(_ sender: UIButton) {
         
+        guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         let assignmentType: AssignmentType = getSelectedAssignmentType()
+        
+        let dayIndex = dayPickerView.selectedRow(inComponent: 0)
+        let assignmentModel = AssignmentModel(course: newTitle, subTitle: subtitleTextField.text ?? "", assignmentType: assignmentType)
+        
+        AssignmentFunctions.createAssignment(at: courseIndex, for: dayIndex, using: assignmentModel)
+        
+        if let finishedSaving = finishedSaving {
+            finishedSaving(dayIndex, assignmentModel)
+        }
         
         dismiss(animated: true)
     }
