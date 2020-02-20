@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddAssignmentViewController: UIViewController {
+class AddAssignmentViewController: UITableViewController {
     
     @IBOutlet weak var courseLabel: UILabel!
     @IBOutlet weak var dayPickerView: UIPickerView!
@@ -69,6 +69,10 @@ class AddAssignmentViewController: UIViewController {
     
     @IBAction func cancel(_ sender: UIButton) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func done(_ sender: UITextField) {
+        sender.resignFirstResponder()
     }
 }
 
