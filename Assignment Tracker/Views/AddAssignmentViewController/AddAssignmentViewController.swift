@@ -85,10 +85,3 @@ extension AddAssignmentViewController: UIPickerViewDataSource, UIPickerViewDeleg
         return courseModel.dayModels[row].course.mediumDate()
     }
 }
-
-// Okay need to use core data
-
-func coreData() {
-    let x = 3
-    return
-}
