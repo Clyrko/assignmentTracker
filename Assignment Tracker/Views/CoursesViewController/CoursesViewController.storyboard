@@ -98,6 +98,7 @@
                     <connections>
                         <outlet property="addButton" destination="Z9Z-2q-EGT" id="rgm-ku-vwL"/>
                         <outlet property="helpView" destination="xBc-uP-xKY" id="her-LE-Wy9"/>
+                        <outlet property="logoImageView" destination="xz6-Rg-dx2" id="yF6-6k-3bL"/>
                         <outlet property="tableView" destination="FjZ-Hx-Q0f" id="JFf-AY-G8F"/>
                     </connections>
                 </viewController>

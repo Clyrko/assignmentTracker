@@ -10,6 +10,7 @@ import UIKit
 
 class CoursesViewController: UIViewController {
 
+    @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet var helpView: UIVisualEffectView!
@@ -34,11 +35,13 @@ class CoursesViewController: UIViewController {
             }
         })
         
-        
-        view.addSubview(helpView)
-        helpView.frame = view.frame
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingButtonAction()
+        
+        UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn], animations: {
+            self.logoImageView.alpha = 0
+            self.logoImageView.transform = CGAffineTransform(scaleX: 3, y: 3)
+        })
     }
     
     
