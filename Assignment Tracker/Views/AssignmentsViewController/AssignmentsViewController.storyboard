@@ -120,7 +120,7 @@
                                             <constraints>
                                                 <constraint firstItem="WyE-SL-BYc" firstAttribute="leading" secondItem="vUk-ob-dL5" secondAttribute="leadingMargin" id="PKV-aA-0gA"/>
                                                 <constraint firstItem="WyE-SL-BYc" firstAttribute="top" secondItem="vUk-ob-dL5" secondAttribute="topMargin" id="gxD-OU-oLZ"/>
-                                                <constraint firstItem="WyE-SL-BYc" firstAttribute="bottom" secondItem="vUk-ob-dL5" secondAttribute="bottomMargin" id="m7T-ps-8vv"/>
+                                                <constraint firstItem="WyE-SL-BYc" firstAttribute="bottom" secondItem="vUk-ob-dL5" secondAttribute="bottomMargin" priority="250" id="m7T-ps-8vv"/>
                                                 <constraint firstItem="WyE-SL-BYc" firstAttribute="trailing" secondItem="vUk-ob-dL5" secondAttribute="trailingMargin" id="miI-pY-dUb"/>
                                             </constraints>
                                         </tableViewCellContentView>

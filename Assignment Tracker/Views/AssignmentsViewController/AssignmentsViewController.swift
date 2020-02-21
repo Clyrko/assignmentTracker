@@ -67,7 +67,7 @@ class AssignmentsViewController: UIViewController {
         present(alert, animated: true)
     }
     
-    fileprivate func getCourseIndex() -> Int? {
+    fileprivate func getCourseIndex() -> Int! {
         return CourseData.courseModels.firstIndex(where: { (courseModel) -> Bool in
             courseModel.id == courseId
         })
@@ -141,6 +141,34 @@ extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate 
         cell.setup(model: model!)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let assignmentModel = courseModel!.dayModels[indexPath.section].assignmentModels[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { (contextualAction, view, actionPerformed: @escaping (Bool) -> ()) in
+            
+            let alert = UIAlertController(title: "Delete Assignment", message: "Are you sure you want to delete this assignment: \(assignmentModel.course)?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (alertAction) in
+                actionPerformed(false)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (alertAction) in
+                AssignmentFunctions.deleteAssignment(at: self.getCourseIndex(), for: indexPath.section, using: assignmentModel)
+                
+                self.courseModel!.dayModels[indexPath.section].assignmentModels.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                actionPerformed(true)
+            }))
+            
+            self.present(alert, animated: true)
+        }
+        
+        delete.image = #imageLiteral(resourceName: "deleteButton")
+        
+        return UISwipeActionsConfiguration(actions: [delete])
     }
     
 }

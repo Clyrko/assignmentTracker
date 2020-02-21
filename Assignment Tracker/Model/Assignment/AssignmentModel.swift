@@ -26,3 +26,9 @@ struct AssignmentModel {
         
     }
 }
+
+extension AssignmentModel: Equatable {
+    static func == (lhs: AssignmentModel, rhs: AssignmentModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+}
