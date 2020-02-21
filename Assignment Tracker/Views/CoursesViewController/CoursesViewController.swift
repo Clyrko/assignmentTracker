@@ -24,23 +24,27 @@ class CoursesViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
-        CourseFunctions.readCourse(completion: { [unowned self] in
-            self.tableView.reloadData()
-
-            if CourseData.courseModels.count > 0 {
-                if UserDefaults.standard.bool(forKey: self.seenCourseHelp)  == false {
-                    self.view.addSubview(self.helpView)
-                    self.helpView.frame = self.view.bounds
-                }
-            }
-        })
-        
         view.backgroundColor = Theme.backgroundColor
         addButton.createFloatingButtonAction()
         
         UIView.animate(withDuration: 1, delay: 0, options: [.curveEaseIn], animations: {
             self.logoImageView.alpha = 0
             self.logoImageView.transform = CGAffineTransform(scaleX: 3, y: 3)
+        }) { (success) in
+            self.getCourseData()
+        }
+    }
+    
+    fileprivate func getCourseData() {
+        CourseFunctions.readCourse(completion: { [unowned self] in
+            self.tableView.reloadData()
+            
+            if CourseData.courseModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.seenCourseHelp)  == false {
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.bounds
+                }
+            }
         })
     }
     
