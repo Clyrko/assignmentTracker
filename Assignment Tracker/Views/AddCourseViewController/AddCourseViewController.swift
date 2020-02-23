@@ -102,6 +102,8 @@ class AddCourseViewController: UIViewController {
                     alert.addAction(gotoSettingsAction)
                     alert.addAction(cancelAction)
                     self.present(alert, animated: true)
+                @unknown default:
+                    print("Apple added something")
                 }
         }
     }
