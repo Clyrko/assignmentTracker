@@ -23,6 +23,11 @@ class AddAssignmentViewController: UITableViewController {
     var courseIndex: Int!
     var courseModel: CourseModel!
     
+    // Editing Assignments
+    var dayIndexToEdit: Int?
+    var assignmentModelToEdit: AssignmentModel!
+    var finishedUpdating: ((Int, Int, AssignmentModel) -> ())?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,12 +35,27 @@ class AddAssignmentViewController: UITableViewController {
         
         dayPickerView.dataSource = self
         dayPickerView.delegate = self
+        
+        if let dayIndex = dayIndexToEdit, let assignmentModel = assignmentModelToEdit {
+            // Update Assignment: Populate the popup
+            courseLabel.text = "Edit Assignment"
+            
+            // Select the Day in the Picker View
+            dayPickerView.selectRow(dayIndex, inComponent: 0, animated: true)
+            
+            // Populate the Assignment Data
+            AssignmentTypeSelected(assignmentTypeButtons[assignmentModel.assignmentType.rawValue])
+            titleTextField.text = assignmentModel.course
+            subtitleTextField.text = assignmentModel.subTitle
+        } else {
+            // New Assignment: Set default values
+            AssignmentTypeSelected(assignmentTypeButtons[AssignmentType.essay.rawValue])
+        }
     }
     
     @IBAction func AssignmentTypeSelected(_ sender: UIButton) {
         
         assignmentTypeButtons.forEach({ $0.tintColor = Theme.Accent })
-        
         sender.tintColor = Theme.tintColor
     }
     

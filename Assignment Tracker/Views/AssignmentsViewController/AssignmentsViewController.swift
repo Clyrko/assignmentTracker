@@ -143,6 +143,62 @@ extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") {
+            (contextualAction, view, actionPerformed: (Bool) -> ()) in
+            let vc = AddAssignmentViewController.getInstance() as! AddAssignmentViewController
+            vc.courseModel = self.courseModel
+            
+            // Which Course are we working with
+            vc.courseIndex = self.getCourseIndex()
+            
+            // Which Day are we on
+            vc.dayIndexToEdit = indexPath.section
+            
+            // Which Assignment are we editing?
+            vc.assignmentModelToEdit = self.courseModel?.dayModels[indexPath.section].assignmentModels[indexPath.row]
+            
+            //What do we want to happen after the Assignment is saved
+            vc.finishedUpdating = { [ weak self] oldDayIndex, newDayIndex, assignmentModel in
+                guard let self = self else { return }
+                
+                let oldAssignmentIndex = (self.courseModel?.dayModels[oldDayIndex].assignmentModels.firstIndex(of: assignmentModel))!
+                
+                if oldDayIndex == newDayIndex {
+                    // 1. Update the local table data
+                    self.courseModel?.dayModels[newDayIndex].assignmentModels[oldAssignmentIndex] = assignmentModel
+                    
+                    // 2. Refresh just that row
+                    let indexPath = IndexPath(row: oldAssignmentIndex, section: newDayIndex)
+                    tableView.reloadRows(at: [indexPath], with: .automatic)
+                } else {
+                    // Assignment moved to a different day
+                    
+                    // 1. Remove assignment from local table data
+                    self.courseModel?.dayModels[oldDayIndex].assignmentModels.remove(at: oldAssignmentIndex)
+                    // 2. Insert assignment into new location
+                    let lastIndex = (self.courseModel?.dayModels[newDayIndex].assignmentModels.count)!
+                    self.courseModel?.dayModels[newDayIndex].assignmentModels.insert(assignmentModel, at: lastIndex)
+                    // 3. Update rows
+                    tableView.performBatchUpdates({
+                        tableView.deleteRows(at: [indexPath], with: .automatic)
+                        let insertIndexPath = IndexPath(row: lastIndex, section: newDayIndex)
+                        tableView.insertRows(at: [insertIndexPath], with: .automatic)
+                    })
+                }
+            }
+            
+            self.present(vc, animated: true)
+            actionPerformed(true)
+        }
+        
+        edit.image = #imageLiteral(resourceName: "editIcon")
+        edit.backgroundColor = Theme.secondaryTintColor
+        
+        return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let assignmentModel = courseModel!.dayModels[indexPath.section].assignmentModels[indexPath.row]
