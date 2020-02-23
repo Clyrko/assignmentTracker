@@ -65,13 +65,28 @@ class AddAssignmentViewController: UITableViewController {
         guard titleTextField.hasValue, let newTitle = titleTextField.text else { return }
         let assignmentType: AssignmentType = getSelectedAssignmentType()
         
-        let dayIndex = dayPickerView.selectedRow(inComponent: 0)
-        let assignmentModel = AssignmentModel(course: newTitle, subTitle: subtitleTextField.text ?? "", assignmentType: assignmentType)
+        let newDayIndex = dayPickerView.selectedRow(inComponent: 0)
         
-        AssignmentFunctions.createAssignment(at: courseIndex, for: dayIndex, using: assignmentModel)
-        
-        if let finishedSaving = finishedSaving {
-            finishedSaving(dayIndex, assignmentModel)
+        if assignmentModelToEdit != nil {
+            // Update Assignment
+            
+            assignmentModelToEdit.assignmentType = assignmentType
+            assignmentModelToEdit.course = newTitle
+            assignmentModelToEdit.subTitle = subtitleTextField.text ?? ""
+            
+            AssignmentFunctions.updateAssignment(at: courseIndex, oldDayIndex: dayIndexToEdit!, newDayIndex: newDayIndex, using: assignmentModelToEdit)
+            
+            if let finishedUpdating = finishedUpdating, let oldDayIndex = dayIndexToEdit {
+                finishedUpdating(oldDayIndex, newDayIndex, assignmentModelToEdit)
+            }
+        } else {
+            // New Assignment
+            let assignmentModel = AssignmentModel(course: newTitle, subTitle: subtitleTextField.text ?? "", assignmentType: assignmentType)
+            AssignmentFunctions.createAssignment(at: courseIndex, for: newDayIndex, using: assignmentModel)
+            
+            if let finishedSaving = finishedSaving {
+                finishedSaving(newDayIndex, assignmentModel)
+            }
         }
         
         dismiss(animated: true)
