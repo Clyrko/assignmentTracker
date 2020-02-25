@@ -6,7 +6,6 @@
 //  Copyright © 2020 Jay A. All rights reserved.
 //
 
-// Need to add login screens
 
 import UIKit
 

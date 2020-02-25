@@ -106,6 +106,12 @@ class AssignmentsViewController: UIViewController {
         }
         present(vc, animated: true)
     }
+    
+    
+    @IBAction func toggleEditMode(_ sender: UIBarButtonItem) {
+        tableView.isEditing.toggle()
+        sender.title = sender.title == "Edit" ? "Done" : "Edit"
+    }
 }
 
 extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -227,4 +233,17 @@ extension AssignmentsViewController: UITableViewDataSource, UITableViewDelegate 
         return UISwipeActionsConfiguration(actions: [delete])
     }
     
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let assignmentModel = (courseModel?.dayModels[sourceIndexPath.section].assignmentModels[sourceIndexPath.row])!
+        
+        courseModel?.dayModels[sourceIndexPath.section].assignmentModels.remove(at: sourceIndexPath.row)
+        
+        courseModel?.dayModels[destinationIndexPath.section].assignmentModels.insert(assignmentModel, at: destinationIndexPath.row)
+        
+        AssignmentFunctions.reorderAssignment(at: getCourseIndex(), oldDayIndex: sourceIndexPath.section, newDayIndex: destinationIndexPath.section, newAssignmentIndex: destinationIndexPath.row, assignmentModel: assignmentModel)
+    }
 }
