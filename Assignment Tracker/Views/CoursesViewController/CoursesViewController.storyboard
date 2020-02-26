@@ -36,15 +36,15 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4R-as-Etx">
-                                                    <rect key="frame" x="137" y="9" width="138" height="136"/>
+                                                    <rect key="frame" x="20" y="11" width="386" height="138"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cpd-j0-Nu2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="138" height="136"/>
+                                                            <rect key="frame" x="2" y="4" width="391" height="135"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0f-l9-rh0">
-                                                            <rect key="frame" x="45" y="31" width="47" height="65"/>
+                                                            <rect key="frame" x="0.0" y="24" width="386" height="64"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                             <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -154,7 +154,7 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="1066.4000000000001" y="145.27736131934034"/>
+            <point key="canvasLocation" x="1065.217391304348" y="144.64285714285714"/>
         </scene>
         <!--AddCourseViewController-->
         <scene sceneID="9VZ-Wm-QJh">
